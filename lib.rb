@@ -67,9 +67,7 @@ end
 def borrow
   puts "Enter the name of the book you want to borrow."
   name_input = gets.chomp
-  if Book.book.include? 'name_input'
-    puts "You can borrow the book."
-  end
+  [@books.name].any? { |text| text.include? "name_input" }
 end
 ################################
 loop do
